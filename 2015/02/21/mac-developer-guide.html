@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mac开发者配置指南</title>
+  <meta name="description" content="Mac开发者配置指南">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2015/02/21/mac-developer-guide.html">
+  <link rel="alternate" type="application/rss+xml" title="IF-ELSE-THEN" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">IF-ELSE-THEN</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Mac开发者配置指南</h1>
+    <p class="post-meta">Feb 21, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="mac">Mac开发者配置指南</h1>
+
+<p>前篇《Mac常用软件推荐》整理了Mac使用者常用的App，本篇我配合着配置我的新Mac，整理了开发者在Mac常用软件和配置。</p>
+
+<h3 id="homebrew">Homebrew</h3>
+<p>Homebrew给Mac提供了类似于Linux下的包管理器，类似的还有MacPorts。它可以帮我们安装很多常用和开发必备的软件。</p>
+
+<p>地址： http://brew.sh/</p>
+
+<p>安装</p>
+
+<pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor 更新Mac自带的unix工具
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+
+# Install Bash 4
+brew install bash
+</code></pre>
+
+<p>常用软件</p>
+
+<pre><code>brew install curl wget git node python 
+brew-cask
+</code></pre>
+
+<p>brew-cask让你可以通过brew来管理安装Mac App。</p>
+
+<p>brew install caskroom/cask/brew-cask
+例如安装dropbox</p>
+
+<pre><code>brew cask install dropbox
+</code></pre>
+
+<p>编辑器
+##Xcode</p>
+
+<p>插件管理器Alcatraz
+地址： http://alcatraz.io/</p>
+
+<p>安装</p>
+
+<pre><code>curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh 删除:
+
+rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin 移除cache:
+
+rm -rf ~/Library/Application\ Support/Alcatraz MacVim 安装
+
+brew install macvim
+brew linkapps macvim 配置
+
+curl https://gist.githubusercontent.com/fengluo/3749890/raw &gt;&gt; ~/.vimrc
+</code></pre>
+
+<p>使用Vundle管理安装VIM插件</p>
+
+<pre><code>git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+</code></pre>
+
+<p>安装好了之后可以打开vim运行</p>
+
+<pre><code>:PluginInstall 也可以直接从命令行安装配置
+
+vim +PluginInstall +qall
+</code></pre>
+
+<h2 id="sublime-text-3">Sublime Text 3</h2>
+<p>创建命令行链接
+sudo mkdir -p “/usr/local/bin/” &amp;&amp; ln -s “/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl” “/usr/local/bin/subl”
+安装 Package Control</p>
+
+<pre><code>import urllib.request,os,hashlib; 
+h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; 
+pf = 'Package Control.sublime-package'; 
+ipp =sublime.installed_packages_path(); 	urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); 
+by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); 
+dh = hashlib.sha256(by).hexdigest(); 
+print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)  Plugins Soda GitGutter SideBarEnhancements Python Flake8 Lint
+</code></pre>
+
+<p>配置
+{
+    “close_windows_when_empty”: true,
+    “color_scheme”: “Packages/Color Scheme - Default/Solarized (Dark).tmTheme”,
+    “font_face”: “M+ 1p”,
+    “font_size”: 14,
+    “highlight_modified_tabs”: true,
+    “ignored_packages”:
+    [
+        “Vintage”,
+        “Markdown”
+    ],
+    “tab_size”: 4,
+    “theme”: “Soda Light 3.sublime-theme”,
+    “translate_tabs_to_spaces”: true
+}
+##Git
+安装
+brew install git git-flow
+配置
+ssh-keygen -t rsa -C “sample@gmail.com”</p>
+
+<pre><code>#使用pbcopy复制ssh key然后粘贴到github.com
+pbcopy &lt; ~/.ssh/id_rsa.pub
+
+#test connection
+ssh -T git@github.com
+
+#set git config values
+git config --global user.name "Joel Glovacki"
+git config --global user.email "saetia@gmail.com"
+git config --global github.user user_name
+git config --global github.token your_token_here
+
+git config --global core.editor "subl -w"
+git config --global color.ui true
+</code></pre>
+
+<p>终端
+##iTerm2
+Mac自带的替代品，带有很多强大的功能支持。对于经常使用终端的开发者来说，这是神器。</p>
+
+<p>地址： http://iterm2.com/</p>
+
+<p>oh-my-zsh
+zsh是bash的替代品，oh-my-zsh给zsh提供了管理配置的框架，它可以方便的管理配置zsh的主题，插件等。</p>
+
+<p>地址: http://ohmyz.sh/</p>
+
+<p>安装</p>
+
+<p>curl -L http://install.ohmyz.sh | sh
+数据库
+Sequel Pro
+开源免费的MySQL的GUI客户端。</p>
+
+<p>地址： http://www.sequelpro.com/</p>
+
+<h2 id="navicat">Navicat</h2>
+<p>Navicat提供了Mac下最齐全的数据库客户端，不过是收费的。</p>
+
+<p>地址： http://www.navicat.com.cn/</p>
+
+<p>其他
+Dash
+Dash是一个API文档浏览器（ API Documentation Browser），以及代码片段管理工具（Code Snippet Manager）。</p>
+
+<p>地址： http://kapeli.com/dash</p>
+
+<p>Sip
+Sip是强大的取色工具，并且可以把颜色输出转换成你想的格式：CSS Hex值，iOS的NSColor值等。绝对可以取代Mac自带的取色工具。</p>
+
+<p>地址： http://theolabrothers.com/sip/</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">IF-ELSE-THEN</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>IF-ELSE-THEN</li>
+          <li><a href="mailto:axap288@gmail.com">axap288@gmail.com</a></li>
+        </ul>
+      </div>
+
+<!--
+      <div class="footer-col  footer-col-3">
+        <p class="text">liunian is blog
+</p>
+      </div>
+    </div>
+--/>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
