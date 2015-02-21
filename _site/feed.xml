@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IF-ELSE-THEN</title>
+    <description>liunian is blog
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 21 Feb 2015 18:11:40 +0800</pubDate>
+    <lastBuildDate>Sat, 21 Feb 2015 18:11:40 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>我的VIM命令备忘</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;操作技巧&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;重复上一次的编辑命令：.&lt;/li&gt;
+  &lt;li&gt;撤销在一行的所有操作：U&lt;/li&gt;
+  &lt;li&gt;Vim快速选中、删除、复制引号或括号中的内&lt;/li&gt;
+  &lt;li&gt;【操作键c/d/y/v】+ i + 【 ‘/“/(/{/[ 】&lt;/li&gt;
+  &lt;li&gt;C+V 进入到块编辑模式，在此模式下可以对纵向的列进行操作&lt;/li&gt;
+  &lt;li&gt;快速选中一个段落：vip&lt;/li&gt;
+  &lt;li&gt;括号匹配：%&lt;/li&gt;
+  &lt;li&gt;往下跳几行：数字+enter&lt;/li&gt;
+  &lt;li&gt;单词替换：两部操作：1.yiw-拷贝一个单词 ； 2. viwp-替换到另一个单词&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;光标操作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fx：移动光标到当前行的下一个 x 处。很明显，x 可以是任意一个字母，而且你可以使用 ; 来重复你的上一个 f 命令。&lt;/li&gt;
+  &lt;li&gt;tx：和上面的命令类似，但是是移动到 x 的左边一个位置。（这真的很有用）&lt;/li&gt;
+  &lt;li&gt;Fx：和 fx 类似，不过是往回找。&lt;/li&gt;
+  &lt;li&gt;w：光标往前移动一个词。&lt;/li&gt;
+  &lt;li&gt;b：光标往后移动一个词。&lt;/li&gt;
+  &lt;li&gt;0：移动光标到当前行首。&lt;/li&gt;
+  &lt;li&gt;^：移动光标到当前行的第一个字母位置。&lt;/li&gt;
+  &lt;li&gt;$：移动光标到行尾。&lt;/li&gt;
+  &lt;li&gt;)：移动光标到下一个句子。&lt;/li&gt;
+  &lt;li&gt;( ：移动光标到上一个句子。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;c-f&gt;：向下移动一屏。
+&lt;/c-f&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;c-b&gt;：向上移动一屏。
+&lt;/c-b&gt;
+  &lt;/li&gt;
+  &lt;li&gt;G：到文件尾&lt;/li&gt;
+  &lt;li&gt;numG：移动光标到指定的行（num）。（比如 10G 就是到第 10 行）&lt;/li&gt;
+  &lt;li&gt;gg：到文件首&lt;/li&gt;
+  &lt;li&gt;H：移动光标到屏幕上面&lt;/li&gt;
+  &lt;li&gt;M：移动光标到屏幕中间&lt;/li&gt;
+  &lt;li&gt;L：移动光标到屏幕下面&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;插入操作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;shift+i:在行首插入&lt;/li&gt;
+  &lt;li&gt;shift+a:在行尾插入&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;删除操作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;删除一个连串非空格字符：dw&lt;/li&gt;
+  &lt;li&gt;删除到词尾：de&lt;/li&gt;
+  &lt;li&gt;删除当前行：dd&lt;/li&gt;
+  &lt;li&gt;删除当前光标到行尾：D&lt;/li&gt;
+  &lt;li&gt;全文删除：g g d G&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;代码对齐&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;按 V 选中一些行，然后按 ‘=’ 这些代码就自动对齐了。&lt;/li&gt;
+  &lt;li&gt;在符号｛或者符号｝上按=% 对当前｛｝之内的代码进行排版&lt;/li&gt;
+  &lt;li&gt;全文代码对齐：g g = G&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vim&quot;&gt;vim标签页的操作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;:tabnew 新建标签页&lt;/li&gt;
+  &lt;li&gt;Ngt   切换标签快捷键&lt;/li&gt;
+  &lt;li&gt;:tabc      关闭当前的tab&lt;/li&gt;
+  &lt;li&gt;:tabo      关闭所有其他的tab&lt;/li&gt;
+  &lt;li&gt;:tabs      查看所有打开的tab&lt;/li&gt;
+  &lt;li&gt;:tabp      前一个&lt;/li&gt;
+  &lt;li&gt;:tabn      后一个&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;分屏模式下得操作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;nw 分屏窗口切换&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;xvim&quot;&gt;xvim&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gd:跳转到头文件此函数的头文件&lt;/li&gt;
+  &lt;li&gt;;n : .h和.m相互切换&lt;/li&gt;
+  &lt;li&gt;;r : 运行&lt;/li&gt;
+  &lt;li&gt;;b : 编译&lt;/li&gt;
+  &lt;li&gt;;c : clean&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 21 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/02/21/vim-note-1.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/21/vim-note-1.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
