@@ -6,320 +6,111 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Feb 2015 18:06:06 +0800</pubDate>
-    <lastBuildDate>Sat, 21 Feb 2015 18:06:06 +0800</lastBuildDate>
+    <pubDate>Sat, 21 Feb 2015 18:22:20 +0800</pubDate>
+    <lastBuildDate>Sat, 21 Feb 2015 18:22:20 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 21 Feb 2015 10:13:20 +0800</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/02/21/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/02/21/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>test</title>
-        <description>&lt;h2 id=&quot;this-my-first-blog&quot;&gt;this my first blog&lt;/h2&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;这是一个小标题&lt;/h1&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;这是大个标题&lt;/h2&gt;
-
-&lt;h6 id=&quot;this-is-h6&quot;&gt;this is H6&lt;/h6&gt;
+        <title>我的VIM命令备忘</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;操作技巧&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;开始一个新段落&lt;/li&gt;
-  &lt;li&gt;开始第二个段落&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;开始第三个段落&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;这是什么?&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+  &lt;li&gt;重复上一次的编辑命令：.&lt;/li&gt;
+  &lt;li&gt;撤销在一行的所有操作：U&lt;/li&gt;
+  &lt;li&gt;Vim快速选中、删除、复制引号或括号中的内&lt;/li&gt;
+  &lt;li&gt;【操作键c/d/y/v】+ i + 【 ‘/“/(/{/[ 】&lt;/li&gt;
+  &lt;li&gt;C+V 进入到块编辑模式，在此模式下可以对纵向的列进行操作&lt;/li&gt;
+  &lt;li&gt;快速选中一个段落：vip&lt;/li&gt;
+  &lt;li&gt;括号匹配：%&lt;/li&gt;
+  &lt;li&gt;往下跳几行：数字+enter&lt;/li&gt;
+  &lt;li&gt;单词替换：两部操作：1.yiw-拷贝一个单词 ； 2. viwp-替换到另一个单词&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;光标操作&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;
-Fenced code blocks are like Stardard Markdown’s regular code
-blocks, except that they’re not indented and instead rely on
-a start and end fence lines to delimit the code block.
-&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;fx：移动光标到当前行的下一个 x 处。很明显，x 可以是任意一个字母，而且你可以使用 ; 来重复你的上一个 f 命令。&lt;/li&gt;
+  &lt;li&gt;tx：和上面的命令类似，但是是移动到 x 的左边一个位置。（这真的很有用）&lt;/li&gt;
+  &lt;li&gt;Fx：和 fx 类似，不过是往回找。&lt;/li&gt;
+  &lt;li&gt;w：光标往前移动一个词。&lt;/li&gt;
+  &lt;li&gt;b：光标往后移动一个词。&lt;/li&gt;
+  &lt;li&gt;0：移动光标到当前行首。&lt;/li&gt;
+  &lt;li&gt;^：移动光标到当前行的第一个字母位置。&lt;/li&gt;
+  &lt;li&gt;$：移动光标到行尾。&lt;/li&gt;
+  &lt;li&gt;)：移动光标到下一个句子。&lt;/li&gt;
+  &lt;li&gt;( ：移动光标到上一个句子。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;c-f&gt;：向下移动一屏。
+&lt;/c-f&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;c-b&gt;：向上移动一屏。
+&lt;/c-b&gt;
+  &lt;/li&gt;
+  &lt;li&gt;G：到文件尾&lt;/li&gt;
+  &lt;li&gt;numG：移动光标到指定的行（num）。（比如 10G 就是到第 10 行）&lt;/li&gt;
+  &lt;li&gt;gg：到文件首&lt;/li&gt;
+  &lt;li&gt;H：移动光标到屏幕上面&lt;/li&gt;
+  &lt;li&gt;M：移动光标到屏幕中间&lt;/li&gt;
+  &lt;li&gt;L：移动光标到屏幕下面&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;var x = 100;
-var y = 1;
-var z = x + y;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;插入操作&lt;/h3&gt;
 
-&lt;h4 id=&quot;tables&quot;&gt;Tables&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;shift+i:在行首插入&lt;/li&gt;
+  &lt;li&gt;shift+a:在行尾插入&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;A simple table looks like this:&lt;/p&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;删除操作&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;First Header&lt;/th&gt;
-      &lt;th&gt;Second Header&lt;/th&gt;
-      &lt;th&gt;Third Header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+  &lt;li&gt;删除一个连串非空格字符：dw&lt;/li&gt;
+  &lt;li&gt;删除到词尾：de&lt;/li&gt;
+  &lt;li&gt;删除当前行：dd&lt;/li&gt;
+  &lt;li&gt;删除当前光标到行尾：D&lt;/li&gt;
+  &lt;li&gt;全文删除：g g d G&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;If you wish, you can add a leading and tailing pipe to each line of the table:&lt;/p&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;代码对齐&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;First Header&lt;/th&gt;
-      &lt;th&gt;Second Header&lt;/th&gt;
-      &lt;th&gt;Third Header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+  &lt;li&gt;按 V 选中一些行，然后按 ‘=’ 这些代码就自动对齐了。&lt;/li&gt;
+  &lt;li&gt;在符号｛或者符号｝上按=% 对当前｛｝之内的代码进行排版&lt;/li&gt;
+  &lt;li&gt;全文代码对齐：g g = G&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Specify alignment for each column by adding colons to separator lines:&lt;/p&gt;
+&lt;h3 id=&quot;vim&quot;&gt;vim标签页的操作&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;First Header&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Second Header&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Third Header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Left&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Center&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Right&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Left&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Center&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Right&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+  &lt;li&gt;:tabnew 新建标签页&lt;/li&gt;
+  &lt;li&gt;Ngt   切换标签快捷键&lt;/li&gt;
+  &lt;li&gt;:tabc      关闭当前的tab&lt;/li&gt;
+  &lt;li&gt;:tabo      关闭所有其他的tab&lt;/li&gt;
+  &lt;li&gt;:tabs      查看所有打开的tab&lt;/li&gt;
+  &lt;li&gt;:tabp      前一个&lt;/li&gt;
+  &lt;li&gt;:tabn      后一个&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;下面将要显示一个图片
-&lt;img src=&quot;http://i.imgur.com/RneFnkg.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;分屏模式下得操作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;nw 分屏窗口切换&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;xvim&quot;&gt;xvim&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gd:跳转到头文件此函数的头文件&lt;/li&gt;
+  &lt;li&gt;;n : .h和.m相互切换&lt;/li&gt;
+  &lt;li&gt;;r : 运行&lt;/li&gt;
+  &lt;li&gt;;b : 编译&lt;/li&gt;
+  &lt;li&gt;;c : clean&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 21 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/21/test.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/21/test.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Mac开发者配置指南</title>
-        <description>&lt;h1 id=&quot;mac&quot;&gt;Mac开发者配置指南&lt;/h1&gt;
-
-&lt;p&gt;前篇《Mac常用软件推荐》整理了Mac使用者常用的App，本篇我配合着配置我的新Mac，整理了开发者在Mac常用软件和配置。&lt;/p&gt;
-
-&lt;h3 id=&quot;homebrew&quot;&gt;Homebrew&lt;/h3&gt;
-&lt;p&gt;Homebrew给Mac提供了类似于Linux下的包管理器，类似的还有MacPorts。它可以帮我们安装很多常用和开发必备的软件。&lt;/p&gt;
-
-&lt;p&gt;地址： http://brew.sh/&lt;/p&gt;
-
-&lt;p&gt;安装&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-brew doctor 更新Mac自带的unix工具
-
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;常用软件&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew install curl wget git node python 
-brew-cask
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;brew-cask让你可以通过brew来管理安装Mac App。&lt;/p&gt;
-
-&lt;p&gt;brew install caskroom/cask/brew-cask
-例如安装dropbox&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew cask install dropbox
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;编辑器
-##Xcode&lt;/p&gt;
-
-&lt;p&gt;插件管理器Alcatraz
-地址： http://alcatraz.io/&lt;/p&gt;
-
-&lt;p&gt;安装&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh 删除:
-
-rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin 移除cache:
-
-rm -rf ~/Library/Application\ Support/Alcatraz MacVim 安装
-
-brew install macvim
-brew linkapps macvim 配置
-
-curl https://gist.githubusercontent.com/fengluo/3749890/raw &amp;gt;&amp;gt; ~/.vimrc
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;使用Vundle管理安装VIM插件&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装好了之后可以打开vim运行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;:PluginInstall 也可以直接从命令行安装配置
-
-vim +PluginInstall +qall
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;sublime-text-3&quot;&gt;Sublime Text 3&lt;/h2&gt;
-&lt;p&gt;创建命令行链接
-sudo mkdir -p “/usr/local/bin/” &amp;amp;&amp;amp; ln -s “/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl” “/usr/local/bin/subl”
-安装 Package Control&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import urllib.request,os,hashlib; 
-h = &#39;7183a2d3e96f11eeadd761d777e62404&#39; + &#39;e330c659d4bb41d3bdf022e94cab3cd0&#39;; 
-pf = &#39;Package Control.sublime-package&#39;; 
-ipp =sublime.installed_packages_path(); 	urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); 
-by = urllib.request.urlopen( &#39;http://packagecontrol.io/&#39; + pf.replace(&#39; &#39;, &#39;%20&#39;)).read(); 
-dh = hashlib.sha256(by).hexdigest(); 
-print(&#39;Error validating download (got %s instead of %s), please try manual install&#39; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &#39;wb&#39; ).write(by)  Plugins Soda GitGutter SideBarEnhancements Python Flake8 Lint
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;配置
-{
-    “close_windows_when_empty”: true,
-    “color_scheme”: “Packages/Color Scheme - Default/Solarized (Dark).tmTheme”,
-    “font_face”: “M+ 1p”,
-    “font_size”: 14,
-    “highlight_modified_tabs”: true,
-    “ignored_packages”:
-    [
-        “Vintage”,
-        “Markdown”
-    ],
-    “tab_size”: 4,
-    “theme”: “Soda Light 3.sublime-theme”,
-    “translate_tabs_to_spaces”: true
-}
-##Git
-安装
-brew install git git-flow
-配置
-ssh-keygen -t rsa -C “sample@gmail.com”&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#使用pbcopy复制ssh key然后粘贴到github.com
-pbcopy &amp;lt; ~/.ssh/id_rsa.pub
-
-#test connection
-ssh -T git@github.com
-
-#set git config values
-git config --global user.name &quot;Joel Glovacki&quot;
-git config --global user.email &quot;saetia@gmail.com&quot;
-git config --global github.user user_name
-git config --global github.token your_token_here
-
-git config --global core.editor &quot;subl -w&quot;
-git config --global color.ui true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;终端
-##iTerm2
-Mac自带的替代品，带有很多强大的功能支持。对于经常使用终端的开发者来说，这是神器。&lt;/p&gt;
-
-&lt;p&gt;地址： http://iterm2.com/&lt;/p&gt;
-
-&lt;p&gt;oh-my-zsh
-zsh是bash的替代品，oh-my-zsh给zsh提供了管理配置的框架，它可以方便的管理配置zsh的主题，插件等。&lt;/p&gt;
-
-&lt;p&gt;地址: http://ohmyz.sh/&lt;/p&gt;
-
-&lt;p&gt;安装&lt;/p&gt;
-
-&lt;p&gt;curl -L http://install.ohmyz.sh | sh
-数据库
-Sequel Pro
-开源免费的MySQL的GUI客户端。&lt;/p&gt;
-
-&lt;p&gt;地址： http://www.sequelpro.com/&lt;/p&gt;
-
-&lt;h2 id=&quot;navicat&quot;&gt;Navicat&lt;/h2&gt;
-&lt;p&gt;Navicat提供了Mac下最齐全的数据库客户端，不过是收费的。&lt;/p&gt;
-
-&lt;p&gt;地址： http://www.navicat.com.cn/&lt;/p&gt;
-
-&lt;p&gt;其他
-Dash
-Dash是一个API文档浏览器（ API Documentation Browser），以及代码片段管理工具（Code Snippet Manager）。&lt;/p&gt;
-
-&lt;p&gt;地址： http://kapeli.com/dash&lt;/p&gt;
-
-&lt;p&gt;Sip
-Sip是强大的取色工具，并且可以把颜色输出转换成你想的格式：CSS Hex值，iOS的NSColor值等。绝对可以取代Mac自带的取色工具。&lt;/p&gt;
-
-&lt;p&gt;地址： http://theolabrothers.com/sip/&lt;/p&gt;
-</description>
-        <pubDate>Sat, 21 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/21/mac-developer-guide.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/21/mac-developer-guide.html</guid>
+        <link>http://yourdomain.com/2015/02/21/vim-note-1.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/21/vim-note-1.html</guid>
         
         
       </item>
