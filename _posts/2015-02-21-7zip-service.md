@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 文件夹添加一个右键7zip压缩的方法
+title: 在文件夹右键7zip压缩的方法
 ---
 
 * 通过brew来安装一个7zip命令
