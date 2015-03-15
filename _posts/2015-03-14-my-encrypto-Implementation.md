@@ -372,3 +372,35 @@ hNbTZwnMBASj+6yQil7+ss7n1YeC3+AwMhlXuBtMSOm/7eGUW5cO5y5XiRWBmwJBAKM/NgOmkj2i
 QCrCGA11+l0XOziD21dHQ4I1HK1kANkGgWNt2KXWD8oL1DcR3/eJ0fEcUbMc/37WAy1Js/Alx07D
 /5ch6y2xFcw=
 	
+###在iOS中使用RSA加密
+
+找到了一个不错的开源库:[ios-openssl-wrapper](https://github.com/lokielse/ios-openssl-rsa-wrapper)
+需要openssl-Universal库的支持,cocoapod:    
+
+	pod 'OpenSSL-Universal', '~> 1.0.1.l'
+
+需要BASE64支持,可选择的开源库有：GTMBase64 
+
+加密代码：
+
+	+(NSString*)cryptoStringWithRSA:(NSString *)plaintext
+	{
+
+		QSRSA *qr = [[QSRSA alloc] init];
+		//此处公钥需要加上"BEGIN..... END..... 并且每行后加\n换行
+		NSString *publicKey = @"-----BEGIN PUBLIC KEY-----\n"
+		"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYD6I0/PkUGiB03ZdQrBUXhuL4vhBQB/k8DzcB\n"
+		"8GN8ww7kMChAv5nEKxVHLsx11Md5nGHD2gcoZCKyKobXO3+3zD+zv5g4gBNzduw8Xh9Oxlj+2Waz\n"
+		"Vcl20fSI1HI/RY+OlAA8B/wrSBDDU/9LCAGZVBN83RcUHruL5TXfwrnStQIDAQAB\n"
+		"-----END PUBLIC KEY-----";
+	
+	
+		NSData *plainData = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
+	
+		//Set Public key
+		[qr setPublicKey:publicKey];
+	
+		NSString *encryptString = [GTMBase64 stringByEncodingData:[qr encryptDataWithPublicKey:plainData]];
+		return encryptString;
+	}
+

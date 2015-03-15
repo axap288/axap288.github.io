@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Mar 2015 17:46:17 +0800</pubDate>
-    <lastBuildDate>Sat, 14 Mar 2015 17:46:17 +0800</lastBuildDate>
+    <pubDate>Sun, 15 Mar 2015 12:02:46 +0800</pubDate>
+    <lastBuildDate>Sun, 15 Mar 2015 12:02:46 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -381,6 +381,40 @@ hNbTZwnMBASj+6yQil7+ss7n1YeC3+AwMhlXuBtMSOm/7eGUW5cO5y5XiRWBmwJBAKM/NgOmkj2i
 7sCi9bs3kdjwke8iDpmawd5r129PUiiVC66sniVVUR6Lx0X7Y+c/FT05zqSrqBSPav7J21rYNg0C
 QCrCGA11+l0XOziD21dHQ4I1HK1kANkGgWNt2KXWD8oL1DcR3/eJ0fEcUbMc/37WAy1Js/Alx07D
 /5ch6y2xFcw=&lt;/p&gt;
+
+&lt;h3 id=&quot;iosrsa&quot;&gt;在iOS中使用RSA加密&lt;/h3&gt;
+
+&lt;p&gt;找到了一个不错的开源库:&lt;a href=&quot;https://github.com/lokielse/ios-openssl-rsa-wrapper&quot;&gt;ios-openssl-wrapper&lt;/a&gt;
+需要openssl-Universal库的支持,cocoapod:    &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod &#39;OpenSSL-Universal&#39;, &#39;~&amp;gt; 1.0.1.l&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;需要BASE64支持,可选择的开源库有：GTMBase64 &lt;/p&gt;
+
+&lt;p&gt;加密代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+(NSString*)cryptoStringWithRSA:(NSString *)plaintext
+{
+
+	QSRSA *qr = [[QSRSA alloc] init];
+	//此处公钥需要加上&quot;BEGIN..... END..... 并且每行后加\n换行
+	NSString *publicKey = @&quot;-----BEGIN PUBLIC KEY-----\n&quot;
+	&quot;MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYD6I0/PkUGiB03ZdQrBUXhuL4vhBQB/k8DzcB\n&quot;
+	&quot;8GN8ww7kMChAv5nEKxVHLsx11Md5nGHD2gcoZCKyKobXO3+3zD+zv5g4gBNzduw8Xh9Oxlj+2Waz\n&quot;
+	&quot;Vcl20fSI1HI/RY+OlAA8B/wrSBDDU/9LCAGZVBN83RcUHruL5TXfwrnStQIDAQAB\n&quot;
+	&quot;-----END PUBLIC KEY-----&quot;;
+
+
+	NSData *plainData = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
+
+	//Set Public key
+	[qr setPublicKey:publicKey];
+
+	NSString *encryptString = [GTMBase64 stringByEncodingData:[qr encryptDataWithPublicKey:plainData]];
+	return encryptString;
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 </description>
         <pubDate>Sat, 14 Mar 2015 00:00:00 +0800</pubDate>
