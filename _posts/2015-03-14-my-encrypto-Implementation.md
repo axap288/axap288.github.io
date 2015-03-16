@@ -374,7 +374,8 @@ QCrCGA11+l0XOziD21dHQ4I1HK1kANkGgWNt2KXWD8oL1DcR3/eJ0fEcUbMc/37WAy1Js/Alx07D
 	
 ###在iOS中使用RSA加密
 
-找到了一个不错的开源库:[ios-openssl-wrapper](https://github.com/lokielse/ios-openssl-rsa-wrapper)
+找到了一个不错的开源库:[ios-openssl-wrapper](https://github.com/lokielse/ios-openssl-rsa-wrapper),使用很简单不在累述，下载后使用QSRSA类即可
+
 需要openssl-Universal库的支持,cocoapod:    
 
 	pod 'OpenSSL-Universal', '~> 1.0.1.l'
